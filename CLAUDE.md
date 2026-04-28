@@ -43,3 +43,71 @@ This is a **WooCommerce plugin** that registers a widget in the WordPress admin 
 3. Displays scores and improvement suggestions in WP Admin
 
 ### Folder structure (planned)
+woo-project/
+├── woo-health-widget.php
+├── includes/
+│   ├── class-health-checker.php
+│   └── class-widget.php
+├── assets/
+│   ├── css/widget.css
+│   └── js/widget.js
+├── templates/
+│   └── widget-dashboard.php
+├── .gitignore
+└── README.md
+
+---
+
+## 🐳 Local Development
+
+The team uses **Docker**. Mount the plugin as a volume:
+
+```yaml
+volumes:
+  - ./woo-project:/var/www/html/wp-content/plugins/woo-health-widget
+```
+
+Activate via **WP Admin → Plugins**.
+
+---
+
+## 🧭 Widget Feature Scope
+
+### 1. 🔍 Visibility
+SEO checks — product titles, meta descriptions, sitemaps
+
+### 2. ⚡ Performance
+Page speed, image optimization status
+
+### 3. 🛒 Conversion
+Missing product images/descriptions, checkout experience
+
+### 4. 💰 Profit
+Best/worst products, upsell opportunities, abandoned cart
+
+---
+
+## ✅ Coding Guidelines
+
+1. **Comment everything** in plain English
+2. **Keep files small** — one responsibility per file
+3. Follow **[WordPress Coding Standards](https://developer.wordpress.org/coding-standards/)**
+4. Use **WordPress/WooCommerce built-in functions** wherever possible
+5. **No external dependencies** unless absolutely necessary
+6. All user-facing strings must use `__()` or `_e()` for translations
+
+---
+
+## 🔗 Useful Resources
+
+- [WooCommerce Developer Docs](https://developer.woocommerce.com/)
+- [WordPress Plugin Handbook](https://developer.wordpress.org/plugins/)
+- [WooCommerce REST API](https://woocommerce.github.io/woocommerce-rest-api-docs/)
+
+---
+
+## 🗂️ Repository
+
+- **GitHub:** https://github.com/JanaMW27/woo-project
+- **Branches:** Work on feature branches, merge to `main` when ready
+- **Commits:** Use plain English, e.g. `Add health score for visibility section`
